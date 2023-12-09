@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
 
 
         val noteList: List<Note> = listOf(
-            Note("Note 1", "This is the content of Note 1."),
+            Note("Note 1", "This is the content testing of Note 1."),
             Note("Note 2", "Content for Note 2."),
             Note("Note 3", "Content of the third note."),
             // Add more dummy notes as needed
