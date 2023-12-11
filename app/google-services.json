@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "472413637831",
+    "project_id": "fir-58baf",
+    "storage_bucket": "fir-58baf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472413637831:android:ca4a9e6c1b4ed7a1c282e2",
+        "android_client_info": {
+          "package_name": "com.saad.qrscanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXPfVeNdfiiG46xzUPHvMJfeUrJs3vY68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472413637831:android:63de18b5c9907007c282e2",
+        "android_client_info": {
+          "package_name": "com.saad.quicknotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXPfVeNdfiiG46xzUPHvMJfeUrJs3vY68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
