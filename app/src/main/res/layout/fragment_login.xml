@@ -81,7 +81,7 @@
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="@color/redPrimary"
             android:paddingVertical="18dp"
-            android:text="@string/login"
+            android:text=""
             android:textSize="17sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"

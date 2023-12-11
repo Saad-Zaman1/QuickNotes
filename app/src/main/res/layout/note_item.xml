@@ -12,6 +12,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="4dp"
+        android:padding="10dp"
         android:background="@drawable/note_bg">
 
         <!-- Add your note content views here, e.g., TextViews, ImageViews, etc. -->
@@ -20,6 +23,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/note_title"
+            android:maxLines="3"
+            android:ellipsize="end"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,6 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textNoteTitle"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#7E7E7E"
             android:padding="8dp"
             android:textSize="14sp" />
 

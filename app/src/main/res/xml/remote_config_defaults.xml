@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+    <entry>
+        <key>login_text</key>
+        <value>Register</value>
+    </entry>
+    <entry>
+        <key>main_color</key>
+        <value>#DB3022</value>
+    </entry>
+    <entry>
+        <key>login_text_with_condition</key>
+        <value>Login text with condition</value>
+    </entry>
+    <entry>
+        <key>app_theme</key>
+        <value>dark</value>
+    </entry>
+</defaultsMap>

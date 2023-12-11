@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -35,13 +36,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures{
+    buildFeatures {
         //noinspection DataBindingWithoutKapt
         dataBinding = true
     }
 }
 
 dependencies {
+    implementation("com.google.firebase:firebase-config:21.6.0")
+    implementation("com.google.firebase:firebase-analytics:21.5.0")
     val nav_version = "2.7.5"
 
     //Hilt DI
@@ -61,6 +64,9 @@ dependencies {
     //Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    //FlexBox (flexible recycle item)
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
