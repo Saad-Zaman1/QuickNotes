@@ -21,6 +21,40 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            isDebuggable = true
+            buildConfigField(
+                "String",
+                "ADMOB_BANNER",
+                "\"" + project.findProperty("DEV_BANNER_ID") + "\""
+            )
+            buildConfigField(
+                "String",
+                "ADMOB_REWARD",
+                "\"" + project.findProperty("DEV_REWARD_ID") + "\""
+            )
+            buildConfigField(
+                "String",
+                "ADMOB_NATIVE",
+                "\"" + project.findProperty("DEV_NATIVE_ID") + "\""
+            )
+            buildConfigField(
+                "String",
+                "ADMOB_INTERSTITIAL",
+                "\"" + project.findProperty("DEV_INTERSTITIAL_ID") + "\""
+            )
+            buildConfigField(
+                "String",
+                "ADMOB_APP_OPEN",
+                "\"" + project.findProperty("DEV_APPOPEN_ID") + "\""
+            )
+            buildConfigField(
+                "String",
+                "ADMOB_APP_ID",
+                "\"" + project.findProperty("DEV_ADMOB_APP_ID") + "\""
+            )
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -39,13 +73,20 @@ android {
     buildFeatures {
         //noinspection DataBindingWithoutKapt
         dataBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
     implementation("com.google.firebase:firebase-config:21.6.0")
     implementation("com.google.firebase:firebase-analytics:21.5.0")
+    implementation("com.google.firebase:firebase-perf-ktx:20.5.1")
+
+ 
     val nav_version = "2.7.5"
+
+    //Ads
+    implementation("com.google.android.gms:play-services-ads:22.6.0")
 
     //Hilt DI
     implementation("com.google.dagger:hilt-android:2.48")
@@ -67,6 +108,9 @@ dependencies {
 
     //FlexBox (flexible recycle item)
     implementation("com.google.android.flexbox:flexbox:3.0.0")
+
+    val lifecycle_version = "2.6.2"
+    implementation("androidx.lifecycle:lifecycle-process:$lifecycle_version")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

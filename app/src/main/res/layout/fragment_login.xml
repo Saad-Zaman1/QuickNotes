@@ -136,6 +136,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnGoogle"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@color/white"

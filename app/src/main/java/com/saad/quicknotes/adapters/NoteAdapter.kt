@@ -9,13 +9,18 @@ import com.saad.quicknotes.databinding.NoteItemBinding
 import com.saad.quicknotes.models.Note
 
 
-class NoteAdapter(private val notes: List<Note>) :
+class NoteAdapter :
     RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+    var notes: List<Note> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = DataBindingUtil.inflate<NoteItemBinding>(
-            inflater,
+        val binding: NoteItemBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(parent.context),
             R.layout.note_item,
             parent,
             false
@@ -38,8 +43,8 @@ class NoteAdapter(private val notes: List<Note>) :
 //            if (binding.textNoteTitle.text == "") {
 //                binding.textNoteTitle.visibility = View.GONE
 //            }
-            binding.textNoteTitle.text = note.title
-            binding.textNoteContent.text = note.content
+            binding.note = note
+            binding.executePendingBindings()
         }
     }
 }

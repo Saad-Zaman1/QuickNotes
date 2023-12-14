@@ -15,4 +15,16 @@
     </style>
 
     <style name="Theme.QuickNotes" parent="Base.Theme.QuickNotes" />
+
+    <style name="Base.Theme.QuickNotes.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">@drawable/rounded_background</item>
+        <item name="android:width">20dp</item>
+        <item name="android:height">20dp</item>
+    </style>
 </resources>
